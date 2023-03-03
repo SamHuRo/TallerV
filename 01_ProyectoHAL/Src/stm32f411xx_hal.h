@@ -119,7 +119,7 @@ typedef struct
 	volatile uint32_t PLLI2SCFGR;
 	volatile uint32_t reserved14;
 	volatile uint32_t DCKCFGR;
-}RCC_RegDef_t;
+} RCC_RegDef_t;
 
 /*
  * Puntero a RCC_RegDef_t queapunta a la posición excata del periférico RCC, de forma que cada uno de los SFR en
@@ -140,9 +140,13 @@ typedef struct
 #define RCC_AHB1ENR_DMA1_EN			21
 #define RCC_AHB1ENR_DMA2_EN			22
 
-/* ===== Fin de la descripción de los elementos que componen el periférico RCC =====*/.
+/* ===== Fin de la descripción de los elementos que componen el periférico RCC =====*/
 
 /*==== Inicio de la descripción de los elementos que componen el periférico GPIOx ====*/
+/*
+ * Definición de la estructura de datos que representa a cada uno de los registros que componen el
+ * periférico GPIO
+ */
 typedef struct
 {
 	volatile uint32_t MODER;
@@ -198,6 +202,53 @@ typedef struct
 #define GPIO_PUPDR_PULLUP		1
 #define GPIO_PUPDR_PULLDOWN		2
 #define GPIO_PUPDR_RESERVED		3
+
+/*
+ * Definición de los nombres de los pines
+ */
+#define PIN_0			0
+#define PIN_1			1
+#define PIN_2			2
+#define PIN_3			3
+#define PIN_4			4
+#define PIN_5			5
+#define PIN_6			6
+#define PIN_7			7
+#define PIN_8			8
+#define PIN_9			9
+#define PIN_10			10
+#define PIN_11			11
+#define PIN_12			12
+#define PIN_13			13
+#define PIN_14			14
+#define PIN_15			15
+
+/*Definición de las funciones alternativas*/
+#define AF0				0b0000
+#define AF1				0b0001
+#define AF2				0b0010
+#define AF3				0b0011
+#define AF4				0b0100
+#define AF5				0b0101
+#define AF6				0b0110
+#define AF7				0b0111
+#define AF8				0b1000
+#define AF9				0b1001
+#define AF10			0b1010
+#define AF11			0b1011
+#define AF12			0b1100
+#define AF13			0b1101
+#define AF14			0b1110
+#define AF15			0b1111
+
+/*
+ * typedef struct
+ * {
+ * 		volatile unit32_t dummy;    /// Dummy example register ADDR_OFFSET:   0x00
+ * } DUMMY_RegDef_t;
+ */
+
+#endif /*INC_STM32F411XX_HAL_H_ */
 
 
 
