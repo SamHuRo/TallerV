@@ -83,9 +83,10 @@
  */
 typedef struct
 {
-	volatile uint32_t CR;		//Clock Control Register 		ADDR_OFFSET:	0x00
-	volatile uint32_t PLLCFGR;	//PLL Configuration				ADDR_OFFSET:	0x04
-	volatile uint32_t CFGR;		//Clock Configuration register	ADDR_OFFSET:	0x08
+	volatile uint32_t CR;
+	volatile uint32_t PLLCFGR;
+	volatile uint32_t CFGR;
+	volatile uint32_t CIR;
 	volatile uint32_t AHB1RSTR;
 	volatile uint32_t AHB2RSTR;
 	volatile uint32_t reserved0;
@@ -95,7 +96,6 @@ typedef struct
 	volatile uint32_t reserved2;
 	volatile uint32_t reserved3;
 	volatile uint32_t AHB1ENR;
-	volatile uint32_t AHB2ENR;
 	volatile uint32_t AHB2ENR;
 	volatile uint32_t reserved4;
 	volatile uint32_t reserved5;
